@@ -336,10 +336,3 @@ class Multi_Agent_SoccerEnv(gym.Env):
 
     def close(self):
         cv2.destroyAllWindows()
-
-
-# In[ ]:
-
-
-
-
