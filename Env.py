@@ -17,7 +17,7 @@ from gym import spaces
 class Multi_Agent_SoccerEnv(gym.Env):
     metadata = {'render.modes': ['human']}
 
-    def __init__(self, n_agents=2, m_agents=2, field_width=640, field_height=480, goal_width = 100, model = "trained_agent_redefined_2vs2_mid_dis"):
+    def __init__(self, n_agents=2, m_agents=2, field_width=640, field_height=480, goal_width = 100):
         super(Multi_Agent_SoccerEnv, self).__init__()
 
         self.n_agents = n_agents
@@ -26,9 +26,7 @@ class Multi_Agent_SoccerEnv(gym.Env):
         self.field_width = field_width
         self.field_height = field_height
         self.goal_width = goal_width
-        self.episode_reward = 0
         self.parameter = 1
-        self.model = model
         
         self.speed = 1.
         self.movements = [
